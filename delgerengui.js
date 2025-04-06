@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
 function toggleThumbnails() {
     const hiddenThumbs = document.querySelectorAll('.hidden-thumb');
     const toggleBtn = document.getElementById('toggleThumbsBtn');

@@ -5,6 +5,7 @@ function showMenu(){
 function hideMenu(){
     navLinks.style.right = "-200px";
 }
+
 function selectCountry(){
     var country = document.getElementById("country").ariaValueMax;
     document.getElementById("selectedCountry").innerText="Сонголоо: "
