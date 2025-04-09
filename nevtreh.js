@@ -5,19 +5,23 @@ function showMenu(){
 function hideMenu(){
     navLinks.style.right = "-200px";
 }
-function selectCountry(){
-    var country = document.getElementById("country").ariaValueMax;
-    document.getElementById("selectedCountry").innerText="Сонголоо: "
-}
-document.addEventListener("DOMContentLoaded", function () {
-    let yearDropdown = document.getElementById("yearDropdown");
 
-    if (yearDropdown) {
-        for (let i = new Date().getFullYear(); i >= 2000; i--) {
-            let option = document.createElement("option");
-            option.value = i;
-            option.textContent = i;
-            yearDropdown.appendChild(option);
-        }
-    }
+
+const showSignup = document.getElementById("showSignup"); 
+const showLogin = document.getElementById("showLogin");   
+const loginForm = document.getElementById("loginForm");   
+const signupForm = document.getElementById("signupForm"); 
+
+showSignup.addEventListener("click", () => {
+    loginForm.classList.add("hidden");
+    signupForm.classList.remove("hidden");
+
+    showLogin.textContent = "Нэвтрэх";  
+    showSignup.textContent = "Бүртгүүлэх";
+});
+showLogin.addEventListener("click", () => {
+    signupForm.classList.add("hidden");
+    loginForm.classList.remove("hidden");
+    showSignup.textContent = "Бүртгүүлэх";
+    showLogin.textContent = "Нэвтрэх";  
 });

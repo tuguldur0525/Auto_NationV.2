@@ -24,8 +24,6 @@
     background-position: center;
     background-size: cover;
     position: relative;     
-
-
 } 
 nav {
     display: flex;
@@ -36,7 +34,6 @@ nav {
 }
 nav img {
     width: 180px;
-
 }
 .nav-links {
     flex: 1;
@@ -98,55 +95,6 @@ nav img {
     margin: 10px 0 40px;
 }
 
-/*--------Selecter button--------*/
-
-#country {
-    width: 200px;
-    padding: 6px;
-    background: #bababa55;
-    font-size: 14px;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-
-}
-#selectBtn {
-    padding: 6px 12px;
-    font-size: 16px;
-    background: transparent;
-    color: #fff;
-    border: 1px solid #ffffff36  ;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 10px;
-
-}
-
-#selectBtn:hover{
-    border: 1px solid #5391f5;
-    background: #5391f5;
-    transition: 0.5s;
-}
-
-.start-btn {
-    display: inline-block;
-    text-decoration: none;
-    color:white;
-    border: 1px solid #fff;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-    
-}
-.start-btn:hover{
-    border: 1px solid #5391f5;
-    background:#5391f5;
-    transition: 1s;
-    
-}
-
 nav .fa{
     display: none;
 }
@@ -186,184 +134,129 @@ nav .fa{
         margin: 10px;
     }
 }
-/*-------Search bar-----------*/
-.searchBar {
-    background: #ffffff;
-    padding: 25px;
-    text-align: center;
-    border-radius: 12px;
-    border: 1px solid #ddd; /* Soft border */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    width: 100%;
-}
-
-.mainSearch {
-    max-width: 1100px;
-    margin: auto;
-}
-
-.searchTitle {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.searchsection form {
+/*---nevtreh hesgiin css-----*/
+.login-signup-section {
+    background-color: transparent;
+    padding: 60px 0;
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 15px;
-    border-radius: 10px;
-    background: #f8f9fa;
 }
-
-.search-fields {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+.form-container {
+    background-color: #a7a8ac6d;
+    padding: 50px 80px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
     width: 100%;
+    max-width: 400px;
 }
-
-.search-fields input,
-.search-fields select {
-    flex: 1;
-    padding: 12px 15px;
-    font-size: 16px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    min-width: 180px;
-    background: #fff;
-    transition: border 0.3s ease-in-out;
-}
-
-.search-fields input:focus,
-.search-fields select:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-.search-btn {
-    background: #007bff;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-    width: 180px;
-    text-align: center;
-}
-
-.search-btn:hover {
-    background: #0056b3;
-    transform: scale(1.05);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .searchsection form {
-        flex-direction: column;
-    }
-    
-    .search-fields {
-        flex-direction: column;
-    }
-
-    .search-fields input,
-    .search-fields select {
-        width: 100%;
-    }
-
-    .search-btn {
-        width: 100%;
-    }
-}
-
-/*--------zaruud hesgiin css-------*/
-.zaruud h2{
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    
-    margin-bottom: 20px;
-    padding: 20px;
-    font-size: 35px;
-}
-
-.row {
+.form-toggle {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px; 
-}
-
-.product-card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    padding: 15px;
-    transition: transform 0.3s ease;
-    flex: 1 1 calc(25% - 20px);
     margin-bottom: 20px;
 }
-
-.product-card:hover {
-    transform: translateY(-3px);
+.form-toggle button {
+    flex: 1;
+    padding: 10px;
+    font-weight: bold;
+    background: #5391f5;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+.form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.form p {
+    text-align: center;
+    font-size:14px;
+    
+    color:#fff;
+}
+.form p a{
+    text-align: center;
+    text-decoration: underline;
+    color:#015cd2;
+    cursor: pointer;
+}
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.form button[type="submit"] {
+    background-color: #5391f5;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.form button:hover {
+    background-color: #417ee6;
 }
 
+.hidden {
+    display: none;
+}
 @media (max-width: 768px) {
-    .product-card {
-        flex: 1 1 100%; 
+    /* Adjust form container size */
+    .form-container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .form h2 {
+        font-size: 20px;
+    }
+
+    .form input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .form button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .form p a {
+        font-size: 14px;
     }
 }
 
-.product-card img {
-    width: 100%;
-    border-radius: 8px;
-}
-.product-title {
-    font-family: "Robot", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px;
+@media (max-width: 480px) {
+    .form-container {
+        width: 90%;
+    }
+
+    .form h2 {
+        font-size: 18px;
+    }
+
+    .form input {
+        font-size: 13px;
+    }
+
+    .form button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .form p a {
+        font-size: 12px;
+    }
 }
 
-.product-details {
-    display: flex;
-    justify-content:space-evenly;
-    padding: 10px 4px;
-    font-size: 14px;
-    color: #bababa;
-}
-
-.price {
-    font-size: 20px;
-    font-weight: bold;
-    color: #e60000;
-    margin-top: 5px;
-}
-
-.btn-details {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    background: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-.btn-details:hover {
-    background: #0056b3;
-}
 
 /*---------footer-------*/
 .footer {
