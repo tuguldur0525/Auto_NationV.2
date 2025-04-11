@@ -1,39 +1,42 @@
 <!--------Web Application project 1 ------>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-        <title>AutoNation | Vehicle sales v.2</title>
-        <link rel="stylesheet" href="buh_zaruud.css">
-        <!-----Google fontsoos font tataj oruulj ireh-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <!-----bootstrap ashiglan icon ashiglah-->    
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body> <!---navigation bar heseg-->
-        <section class="header"> 
-            <nav>
-                <a href="index.html"> <img src="/images/Logo_AN.png"> </a>
-                <div class ="nav-links" id="navLinks">
-                    <i class="fa fa-times" onclick="hideMenu()"></i>
-                    <ul> 
-                        <li> <a href="index.html">Нүүр</a></li>
-                        <li> <a href="buh_zaruud.html   ">Бүх зарууд</a></li>
-                        <li> <a href="zar_nemeh.html">Зар нэмэх</a></li>
-                        <li> <a href="nevtreh.html" class="nevtreh-btn">Нэвтрэх</a></li>
-                    
-                    </ul>
-                </div>
-                <i class="fa fa-bars" onclick="showMenu()"></i>
-            </nav> 
-                <div class="text-box">
-                    <h1>Автомашины хамгийн том зарын нэгдсэн сайт</h1>
-                    <p>Яг одоо худалдаалагдаж буй шинэ, хуучин автомашины найдвартай мэдээллийг 21 аймаг, 9 дүүргээс хайх боломжтой.</p>
-                    <label for="country">Байршил сонгох:</label>
-                            <select id="country">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>AutoNation | Vehicle sales v.2</title>
+    <link rel="stylesheet" href="buh_zaruud.css">
+    <!-----Google fontsoos font tataj oruulj ireh-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-----bootstrap ashiglan icon ashiglah-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!---navigation bar heseg-->
+    <section class="header">
+        <nav>
+            <a href="index.html"> <img src="images/Logo_AN.png"> </a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li> <a href="index.html">Нүүр</a></li>
+                    <li> <a href="buh_zaruud.html   ">Бүх зарууд</a></li>
+                    <li> <a href="zar_nemeh.html">Зар нэмэх</a></li>
+                    <li> <a href="nevtreh.html" class="nevtreh-btn">Нэвтрэх</a></li>
+
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Автомашины хамгийн том зарын нэгдсэн сайт</h1>
+            <p>Яг одоо худалдаалагдаж буй шинэ, хуучин автомашины найдвартай мэдээллийг 21 аймаг, 9 дүүргээс хайх боломжтой.</p>
+            <label for="country">Байршил сонгох:</label>
+            <select id="country">
                             <option value="ub">Улаанбаатар</option>
                             <option value="ara">Архангай</option>
                             <option value="bao">Баян-Өлгий</option>
@@ -57,12 +60,12 @@
                             <option value="hov">Ховд</option>
                             <option value="hen">Хэнтий</option>
                             </select>
-                            <button id="selectBtn">Сонгох</button>
-                            <p  href ="" id="selectedCountry"></p>
-                  
-                </div>
-        </section>  
-    <!-------Search bar hiih heseg-->    
+            <button id="selectBtn">Сонгох</button>
+            <p href="" id="selectedCountry"></p>
+
+        </div>
+    </section>
+    <!-------Search bar hiih heseg-->
     <section class="searchBar">
         <div class="mainSearch">
             <div class="searchTitle">Автомашин хайх</div>
@@ -87,7 +90,7 @@
                         <select id="yearDropdown">
                             <option value="" selected disabled> Он сонгох </option>
                         </select>
-                        
+
                         <!-- Link to external JavaScript -->
                         <script src="script.js"></script>
                     </div>
@@ -104,7 +107,7 @@
         <div class="row">
             <div class="col-4 product-card">
                 <figure>
-                    <img src="/images/HarrierBlack1.jpg" alt="Toyota Harrier 2016">
+                    <img src="images/HarrierBlack1.jpg" alt="Toyota Harrier 2016">
                 </figure>
                 <div class="product-info">
                     <h4 class="product-title">Toyota Harrier 2018</h4>
@@ -117,10 +120,10 @@
                     <a href="#" class="btn-details">Дэлгэрэнгүй</a>
                 </div>
             </div>
-    
+
             <div class="col-4 product-card">
                 <figure>
-                    <img src="/images/prius60white.avif" alt="Toyota Prius 2024">
+                    <img src="images/prius60white.avif" alt="Toyota Prius 2024">
                 </figure>
                 <div class="product-info">
                     <h4 class="product-title">Toyota Prius 2020</h4>
@@ -133,10 +136,10 @@
                     <a href="#" class="btn-details">Дэлгэрэнгүй</a>
                 </div>
             </div>
-    
+
             <div class="col-4 product-card">
                 <figure>
-                    <img src="/images/220crown.jpg" alt="Toyota Land Cruiser 2021">
+                    <img src="images/220crown.jpg" alt="Toyota Land Cruiser 2021">
                 </figure>
                 <div class="product-info">
                     <h4 class="product-title">Toyota Crown 2020</h4>
@@ -148,13 +151,13 @@
                     <p class="price">210,000,000₮</p>
                     <a href="#" class="btn-details">Дэлгэрэнгүй</a>
                 </div>
-                
+
             </div>
         </div>
         <div class="row">
             <div class="col-4 product-card">
                 <figure>
-                    <img src="/images/cybertruck.avif" alt="Tesla CyberTruck 2024">
+                    <img src="images/cybertruck.avif" alt="Tesla CyberTruck 2024">
                 </figure>
                 <div class="product-info">
                     <h4 class="product-title">Tesla CyberTruck 2024</h4>
@@ -167,10 +170,10 @@
                     <a href="#" class="btn-details">Дэлгэрэнгүй</a>
                 </div>
             </div>
-    
+
             <div class="col-4 product-card">
                 <figure>
-                    <img src="/images/G63.jpg">
+                    <img src="images/G63.jpg">
                 </figure>
                 <div class="product-info">
                     <h4 class="product-title">Mercedes Benz G63 2022</h4>
@@ -183,10 +186,10 @@
                     <a href="#" class="btn-details">Дэлгэрэнгүй</a>
                 </div>
             </div>
-    
+
             <div class="col-4 product-card">
                 <figure>
-                    <img src="/images/bmwM4.avif">
+                    <img src="images/bmwM4.avif">
                 </figure>
                 <div class="product-info">
                     <h4 class="product-title">BMW M4 2021</h4>
@@ -198,7 +201,7 @@
                     <p class="price">210,000,000₮</p>
                     <a href="#" class="btn-details">Дэлгэрэнгүй</a>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -211,15 +214,15 @@
                     <h3>Манай апп-ыг татах</h3>
                     <p>Google play болон App store-с татах боломжтой.</p>
                     <div class="app-logo">
-                        <img src="/images/apple-logo-transparent.svg" alt="App Store">
-                        <img src="/images/play-store-logo3.png" alt="Google Play">
+                        <img src="images/apple-logo-transparent.svg" alt="App Store">
+                        <img src="images/play-store-logo3.png" alt="Google Play">
                     </div>
                 </div>
                 <div class="footer-col">
-                    <img src="/images/Logo_AN.png" alt="Brand Logo" class="footer-logo">
+                    <img src="images/Logo_AN.png" alt="Brand Logo" class="footer-logo">
                     <p>Монголын хамгийн том авто худалдааны сайт.</p>
                 </div>
-                
+
                 <div class="footer-col">
                     <h3>Бидний цахим хуудсуудыг дагах</h3>
                     <ul>
@@ -241,12 +244,12 @@
             </div>
         </div>
         <div class="copyright">
-        <p>&copy 2025 Autonation. All rights reserved.</p> 
+            <p>&copy 2025 Autonation. All rights reserved.</p>
         </div>
     </footer>
-    
 
-        <script src="buh_zaruud.js"></script>
-    </body>
-   
+
+    <script src="buh_zaruud.js"></script>
+</body>
+
 </html>
