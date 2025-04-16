@@ -1,16 +1,18 @@
 var navLinks = document.getElementById("navLinks");
-function showMenu(){
+
+function showMenu() {
     navLinks.style.right = "0";
 }
-function hideMenu(){
+
+function hideMenu() {
     navLinks.style.right = "-200px";
 }
 
-function selectCountry(){
+function selectCountry() {
     var country = document.getElementById("country").ariaValueMax;
-    document.getElementById("selectedCountry").innerText="Сонголоо: "
+    document.getElementById("selectedCountry").innerText = "Сонголоо: "
 }
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     let yearDropdown = document.getElementById("yearDropdown");
 
     if (yearDropdown) {
@@ -20,5 +22,23 @@ document.addEventListener("DOMContentLoaded", function () {
             option.textContent = i;
             yearDropdown.appendChild(option);
         }
+    }
+});
+
+//nevtersen eshiig shalgah
+document.addEventListener('DOMContentLoaded', function() {
+    const zarNemehLink = document.querySelector('a[href="zar_nemeh.html"]');
+
+    if (zarNemehLink) {
+        zarNemehLink.addEventListener('click', function(e) {
+            // Check if the user is authenticated
+            const isAuthenticated = localStorage.getItem('isAuthenticated');
+
+            if (!isAuthenticated) {
+                e.preventDefault(); // Prevent navigating to zar_nemeh.html
+                alert('Та эхлээд бүртгүүлнэ үү.');
+                window.location.href = 'nevtreh.html'; // Redirect to login page
+            }
+        });
     }
 });

@@ -1,30 +1,37 @@
-*{
+* {
     margin: 0;
     padding: 0;
-/* COLORS */  
+    /* COLORS */
     --white: #fff;
     --blue: #5391f5;
     --gray: #bababa;
     --black: #000;
 }
+
+
 /* GOOGLE FONTS oos oruulj irsen fontoo variable ashiglan hereglene*/
+
 .roboto-primary {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400; /* Change this to the desired weight */
+    font-weight: 400;
+    /* Change this to the desired weight */
     font-style: normal;
     font-variation-settings: "wdth" 100;
-  }
+}
+
 
 /*background heseg*/
-.header { 
+
+.header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/2SUV.avif);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/2SUV.avif);
     background-position: center;
     background-size: cover;
-    position: relative;     
-} 
+    position: relative;
+}
+
 nav {
     display: flex;
     padding: 2% 6%;
@@ -32,40 +39,47 @@ nav {
     align-items: center;
     /*background-color: black;*/
 }
+
 nav img {
     width: 180px;
 }
+
 .nav-links {
     flex: 1;
     text-align: right;
 }
+
 .nav-links ul li {
     font-family: "Roboto", sans-serif;
-    font-weight:400;
+    font-weight: 400;
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
     position: relative;
 }
-.nav-links ul li a{
+
+.nav-links ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 13px;
 }
+
 .nevtreh-btn {
-    padding:6px 12px;
+    padding: 6px 12px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    cursor:pointer;
+    cursor: pointer;
     background: #5391f5;
 }
+
 .nevtreh-btn:hover {
     border: 1px solid #5391f5;
     background: #5391f5;
     transition: 1s;
 }
-.nav-links ul li::after{
+
+.nav-links ul li::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -74,9 +88,11 @@ nav img {
     margin: auto;
     transition: 0.5s;
 }
-.nav-links ul li:hover::after{
+
+.nav-links ul li:hover::after {
     width: 100%;
 }
+
 .text-box {
     width: 60%;
     color: white;
@@ -86,27 +102,32 @@ nav img {
     transform: translate(-50%, -50%);
     text-align: center;
 }
+
 .text-box h1 {
     font-size: 62px;
 }
-.text-box p{
-    font-size:14px;
-    color:#fff;
+
+.text-box p {
+    font-size: 14px;
+    color: #fff;
     margin: 10px 0 40px;
 }
 
-nav .fa{
+nav .fa {
     display: none;
 }
+
+
 /*responsive bolgoh*/
-@media(max-width: 700px){
-    .text-box h1{
+
+@media(max-width: 700px) {
+    .text-box h1 {
         font-size: 20px;
     }
-    .nav-links ul li{
+    .nav-links ul li {
         display: block;
     }
-    .nav-links{
+    .nav-links {
         position: absolute;
         background: #5391f5;
         height: 100vh;
@@ -119,22 +140,25 @@ nav .fa{
     }
     nav .fa {
         display: block;
-        color:#fff;
+        color: #fff;
         margin: 10px;
         font-size: 22px;
         cursor: pointer;
     }
-    .nav-links ul{
+    .nav-links ul {
         padding: 30px;
     }
     #country {
-        margin:10px;
+        margin: 10px;
     }
     #selectBtn {
         margin: 10px;
     }
 }
+
+
 /*---nevtreh hesgiin css-----*/
+
 .login-signup-section {
     background-color: transparent;
     padding: 60px 0;
@@ -142,19 +166,22 @@ nav .fa{
     justify-content: center;
     align-items: center;
 }
+
 .form-container {
     background-color: #a7a8ac6d;
     padding: 50px 80px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
 }
+
 .form-toggle {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
+
 .form-toggle button {
     flex: 1;
     padding: 10px;
@@ -166,23 +193,26 @@ nav .fa{
     border-radius: 4px;
     margin: 0 5px;
 }
+
 .form h2 {
     text-align: center;
     margin-bottom: 10px;
     color: #fff;
 }
+
 .form p {
     text-align: center;
-    font-size:14px;
-    
-    color:#fff;
+    font-size: 14px;
+    color: #fff;
 }
-.form p a{
+
+.form p a {
     text-align: center;
     text-decoration: underline;
-    color:#015cd2;
+    color: #015cd2;
     cursor: pointer;
 }
+
 .form input {
     width: 100%;
     padding: 10px;
@@ -191,16 +221,18 @@ nav .fa{
     border-radius: 4px;
     font-size: 14px;
 }
+
 .form button[type="submit"] {
     background-color: #5391f5;
     color: #fff;
     padding: 10px;
-    width: 100%;
+    width: 421px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
 }
+
 .form button:hover {
     background-color: #417ee6;
 }
@@ -208,27 +240,24 @@ nav .fa{
 .hidden {
     display: none;
 }
+
 @media (max-width: 768px) {
     /* Adjust form container size */
     .form-container {
         width: 80%;
         padding: 15px;
     }
-
     .form h2 {
         font-size: 20px;
     }
-
     .form input {
         font-size: 14px;
         padding: 8px;
     }
-
     .form button {
         font-size: 16px;
         padding: 12px;
     }
-
     .form p a {
         font-size: 14px;
     }
@@ -238,20 +267,16 @@ nav .fa{
     .form-container {
         width: 90%;
     }
-
     .form h2 {
         font-size: 18px;
     }
-
     .form input {
         font-size: 13px;
     }
-
     .form button {
         font-size: 14px;
         padding: 10px;
     }
-
     .form p a {
         font-size: 12px;
     }
@@ -259,49 +284,60 @@ nav .fa{
 
 
 /*---------footer-------*/
+
 .footer {
     background-color: #222;
     color: #fff;
     padding: 40px 0;
 }
+
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
     text-align: center;
 }
+
 .footer-col h3 {
     margin-bottom: 15px;
     font-size: 18px;
 }
+
 .footer-col ul {
     list-style: none;
     padding: 0;
 }
+
 .footer-col ul li {
     margin: 5px 0;
 }
+
 .footer-col ul li a {
     text-decoration: none;
     color: #fff;
     transition: 0.3s;
 }
+
 .footer-col ul li a:hover {
     color: #ffcc00;
 }
+
 .app-logo img {
     width: 100px;
     margin: 10px;
 }
+
 .footer-logo {
     width: 150px;
     margin-bottom: 10px;
 }
+
 .copyright {
     text-align: center;
     font-size: 14px;
@@ -311,9 +347,11 @@ nav .fa{
     margin-top: 20px;
     width: 100%;
 }
+
 .copyright p {
     padding: 10px 0;
 }
+
 @media (max-width: 768px) {
     .footer-grid {
         text-align: center;
