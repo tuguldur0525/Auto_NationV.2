@@ -238,6 +238,19 @@ nav .fa {
 }
 
 
+
+/* Sell Form Styles */
+
+.sell-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+
+}
+
 /* Sell Form Styles */
 
 .sell-container {
@@ -264,9 +277,37 @@ nav .fa {
     color: var(--gray);
     font-size: 1.1rem;
 }
+.form-actions .publish-btn {
+    background-color: #5391f5;
+    padding: 15px 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #000;
+
+}
+/* Form Layout */
+
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-header h1 {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 15px;
+}
+
+.form-header p {
+    color: var(--gray);
+    font-size: 1.1rem;
+}
 
 
 /* Form Layout */
+
 
 .advanced-form {
     display: flex;

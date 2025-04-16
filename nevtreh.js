@@ -80,6 +80,6 @@ document.querySelector('.nevtreh-btn').addEventListener('click', function(e) {
     if (localStorage.getItem('isAuthenticated')) {
         e.preventDefault();
         localStorage.removeItem('isAuthenticated');
-        window.location.href = 'index.html';
+        window.location.href = 'profile.html';
     }
 });

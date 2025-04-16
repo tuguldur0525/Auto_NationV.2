@@ -1,217 +1,314 @@
-<!--------Web Application project 1 ------>
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-    <title>AutoNation | Vehicle sales v.2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoNation | Бүх зарууд</title>
     <link rel="stylesheet" href="buh_zaruud.css">
-    <!-----Google fontsoos font tataj oruulj ireh-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-----bootstrap ashiglan icon ashiglah-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
-    <!---navigation bar heseg-->
-    <section class="header">
+    <!-- Navigation -->
+    <section class = "header">
         <nav>
             <a href="index.html"> <img src="images/Logo_AN.png"> </a>
-            <div class="nav-links" id="navLinks">
+            <div class ="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
+                <ul> 
                     <li> <a href="index.html">Нүүр</a></li>
-                    <li> <a href="buh_zaruud.html   ">Бүх зарууд</a></li>
+                    <li> <a href="buh_zaruud.html">Бүх зарууд</a></li>
                     <li> <a href="zar_nemeh.html">Зар нэмэх</a></li>
-                    <li> <a href="nevtreh.html" class="nevtreh-btn">Нэвтрэх</a></li>
-
+                    <li> <a href="pages/nevtreh.html" class="nevtreh-btn">Нэвтрэх</a></li>
+                
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
-        <div class="text-box">
-            <h1>Автомашины хамгийн том зарын нэгдсэн сайт</h1>
-            <p>Яг одоо худалдаалагдаж буй шинэ, хуучин автомашины найдвартай мэдээллийг 21 аймаг, 9 дүүргээс хайх боломжтой.</p>
-            <label for="country">Байршил сонгох:</label>
-            <select id="country">
-                            <option value="ub">Улаанбаатар</option>
-                            <option value="ara">Архангай</option>
-                            <option value="bao">Баян-Өлгий</option>
-                            <option value="bah">Баянхонгор</option>
-                            <option value="bul">Булган</option>
-                            <option value="goa">Говь-Алтай</option>
-                            <option value="gos">Говьсүмбэр</option>
-                            <option value="dau">Дархан-уул</option>
-                            <option value="bul">Булган</option>
-                            <option value="dor">Дорноговь</option>
-                            <option value="dod">Дорнод</option>
-                            <option value="dud">Дундговь</option>
-                            <option value="zav">Завхан</option>
-                            <option value="uvu">Өвөрхангай</option>
-                            <option value="umn">Өмнөговь</option>
-                            <option value="orh">Орхон</option>
-                            <option value="suh">Сүхбаатар</option>
-                            <option value="sel">Сэлэнгэ</option>
-                            <option value="tuv">Төв</option>
-                            <option value="uvs">Увс</option>
-                            <option value="hov">Ховд</option>
-                            <option value="hen">Хэнтий</option>
-                            </select>
-            <button id="selectBtn">Сонгох</button>
-            <p href="" id="selectedCountry"></p>
-
-        </div>
+        </nav> 
     </section>
-    <!-------Search bar hiih heseg-->
-    <section class="searchBar">
-        <div class="mainSearch">
-            <div class="searchTitle">Автомашин хайх</div>
-            <div class="searchsection">
-                <form id="form">
-                    <div class="search-fields">
-                        <input type="text" id="query" name="q" placeholder="Машины нэр..." />
-                        <select id="brand" name="brand">
-                            <option value="">Брэнд сонгох</option>
-                            <option value="Toyota">Toyota</option>
-                            <option value="BMW">BMW</option>
-                            <option value="Mercedes">Mercedes</option>
-                            <option value="Tesla">Tesla</option>
-                        </select>
-                        <select id="manufacturer" name="manufacturer">
-                            <option value="">Үйлдвэрлэгч сонгох</option>
-                            <option value="Japan">Япон</option>
-                            <option value="Germany">Герман</option>
-                            <option value="USA">АНУ</option>
-                            <option value="Korea">Солонгос</option>
-                        </select>
-                        <select id="yearDropdown">
-                            <option value="" selected disabled> Он сонгох </option>
-                        </select>
 
-                        <!-- Link to external JavaScript -->
-                        <script src="script.js"></script>
-                    </div>
-                    <button type="submit" class="search-btn">Хайх</button>
-                </form>
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">Бүгд</button>
+                <button class="filter-tab" data-filter="new">Шинэ зарууд</button>
+                <button class="filter-tab" data-filter="used">Хуучин автомашинууд</button>
+                <button class="filter-tab" data-filter="hybrid">Хибрид</button>
+                <button class="filter-tab" data-filter="electric">Цахилгаан</button>
+                <button class="filter-tab" data-filter="suv">SUV</button>
+                <button class="filter-tab" data-filter="sedan">Седан</button>
+            </div>
+            
+            <div class="sort-options">
+                <span>Эрэмбэлэх:</span>
+                <select id="sortBy">
+                    <option value="newest">Шинээр нэмэгдсэн</option>
+                    <option value="price-low">Үнэ өсөхөөр</option>
+                    <option value="price-high">Үнэ буурахаар</option>
+                    <option value="mileage-low">Гүйлт бага</option>
+                    <option value="mileage-high">Гүйлт их</option>
+                </select>
             </div>
         </div>
     </section>
 
-
-    <!---------Zar haruulah hesguud------>
-    <div class="zaruud">
-        <h2>Шинэ зарууд</h2>
-        <div class="row">
-            <div class="col-4 product-card">
-                <figure>
-                    <img src="images/HarrierBlack1.jpg" alt="Toyota Harrier 2016">
-                </figure>
-                <div class="product-info">
-                    <h4 class="product-title">Toyota Harrier 2018</h4>
-                    <div class="product-details">
-                        <span><i class="fa fa-tachometer"></i> 12,000 км</span>
-                        <span><i class="fa fa-leaf"></i> Хибрид</span>
-                        <span><i class="fa fa-newspaper-o"></i> Дугааргүй</span>
+    <!-- All Listings Section -->
+    <section class="all-listings">
+        <div class="container">
+            <!-- New Listings Section -->
+            <div class="category-section">
+                <h2 class="section-title">Шинэ зарууд</h2>
+                <div class="listings-grid">
+                    <!-- Listing Card 1 -->
+                    <div class="listing-card" data-type="new" data-category="hybrid,sedan">
+                        <div class="listing-badge new">Шинэ</div>
+                        <img src="images/prius60white.avif" alt="Toyota Prius 2020">
+                        <div class="listing-info">
+                            <h3>Toyota Prius 2020</h3>
+                            <div class="listing-details">
+                                <span><i class="fa fa-tachometer"></i> 0 км</span>
+                                <span><i class="fa fa-leaf"></i> Хибрид</span>
+                                <span><i class="fa fa-car"></i> Седан</span>
+                            </div>
+                            <div class="listing-price">125,000,000₮</div>
+                            <div class="listing-location">
+                                <i class="fa fa-map-marker"></i> Улаанбаатар
+                            </div>
+                            <a href="#" class="view-details-btn">Дэлгэрэнгүй</a>
+                        </div>
                     </div>
-                    <p class="price">87,000,000₮</p>
-                    <a href="#" class="btn-details">Дэлгэрэнгүй</a>
+                    
+                    <!-- Listing Card 2 -->
+                    <div class="listing-card" data-type="new" data-category="electric,suv">
+                        <div class="listing-badge new">Шинэ</div>
+                        <img src="images/cybertruck.avif" alt="Tesla CyberTruck 2024">
+                        <div class="listing-info">
+                            <h3>Tesla CyberTruck 2024</h3>
+                            <div class="listing-details">
+                                <span><i class="fa fa-tachometer"></i> 0 км</span>
+                                <span><i class="fa fa-bolt"></i> Цахилгаан</span>
+                                <span><i class="fa fa-car"></i> SUV</span>
+                            </div>
+                            <div class="listing-price">320,000,000₮</div>
+                            <div class="listing-location">
+                                <i class="fa fa-map-marker"></i> Улаанбаатар
+                            </div>
+                            <a href="#" class="view-details-btn">Дэлгэрэнгүй</a>
+                        </div>
+                    </div>
+                    <!----list 3-->
+                    <div class="listing-card" data-type="new" data-category="electric,suv">
+                        <div class="listing-badge new">Шинэ</div>
+                        <img src="images/patrolY62.png" alt="Tesla CyberTruck 2024">
+                        <div class="listing-info">
+                            <h3>Nissan Patrol Y62 2024</h3>
+                            <div class="listing-details">
+                                <span><i class="fa fa-tachometer"></i> 0 км</span>
+                                <span><i class="fa fa-bolt"></i> Хибрид</span>
+                                <span><i class="fa fa-car"></i> SUV</span>
+                            </div>
+                            <div class="listing-price">400,000,000₮</div>
+                            <div class="listing-location">
+                                <i class="fa fa-map-marker"></i> Улаанбаатар
+                            </div>
+                            <a href="#" class="view-details-btn">Дэлгэрэнгүй</a>
+                        </div>
+                    </div>
+                    <div class="listing-card" data-type="new" data-category="electric,suv">
+                        <div class="listing-badge new">Шинэ</div>
+                        <img src="images/BYDsealU.avif" alt="Tesla CyberTruck 2024">
+                        <div class="listing-info">
+                            <h3>Tesla CyberTruck 2024</h3>
+                            <div class="listing-details">
+                                <span><i class="fa fa-tachometer"></i> 0 км</span>
+                                <span><i class="fa fa-bolt"></i> Цахилгаан</span>
+                                <span><i class="fa fa-car"></i> SUV</span>
+                            </div>
+                            <div class="listing-price">320,000,000₮</div>
+                            <div class="listing-location">
+                                <i class="fa fa-map-marker"></i> Улаанбаатар
+                            </div>
+                            <a href="#" class="view-details-btn">Дэлгэрэнгүй</a>
+                        </div>
+                    </div>
+                    <!-- Add more new listings here -->
                 </div>
             </div>
-
-            <div class="col-4 product-card">
-                <figure>
-                    <img src="images/prius60white.avif" alt="Toyota Prius 2024">
-                </figure>
-                <div class="product-info">
-                    <h4 class="product-title">Toyota Prius 2020</h4>
-                    <div class="product-details">
-                        <span><i class="fa fa-tachometer"></i> 0км</span>
-                        <span><i class="fa fa-leaf"></i> Хибрид</span>
-                        <span><i class="fa fa-newspaper-o"></i> Дугааргүй</span>
+            
+            <!-- Used Cars Section -->
+            <div class="category-section">
+                <h2 class="section-title">Хуучин автомашинууд</h2>
+                <div class="listings-grid">
+                    <!-- Listing Card 1 -->
+                    <div class="listing-card" data-type="used" data-category="hybrid,sedan">
+                        <div class="listing-badge used">Хуучин</div>
+                        <img src="images/HarrierBlack1.jpg" alt="Toyota Harrier 2018">
+                        <div class="listing-info">
+                            <h3>Toyota Harrier 2018</h3>
+                            <div class="listing-details">
+                                <span><i class="fa fa-tachometer"></i> 12,000 км</span>
+                                <span><i class="fa fa-leaf"></i> Хибрид</span>
+                                <span><i class="fa fa-car"></i> SUV</span>
+                            </div>
+                            <div class="listing-price">87,000,000₮</div>
+                            <div class="listing-location">
+                                <i class="fa fa-map-marker"></i> Дархан
+                            </div>
+                            <a href="#" class="view-details-btn">Дэлгэрэнгүй</a>
+                        </div>
                     </div>
-                    <p class="price">125,000,000₮</p>
-                    <a href="#" class="btn-details">Дэлгэрэнгүй</a>
+                    
+                    <!-- Listing Card 2 -->
+                    <div class="listing-card" data-type="used" data-category="sedan">
+                        <div class="listing-badge used">Хуучин</div>
+                        <img src="images/220crown.jpg" alt="Toyota Crown 2020">
+                        <div class="listing-info">
+                            <h3>Toyota Crown 2020</h3>
+                            <div class="listing-details">
+                                <span><i class="fa fa-tachometer"></i> 5,000 км</span>
+                                <span><i class="fa fa-leaf"></i> Хибрид</span>
+                                <span><i class="fa fa-car"></i> Седан</span>
+                            </div>
+                            <div class="listing-price">210,000,000₮</div>
+                            <div class="listing-location">
+                                <i class="fa fa-map-marker"></i> Улаанбаатар
+                            </div>
+                            <a href="#" class="view-details-btn">Дэлгэрэнгүй</a>
+                        </div>
+                    </div>
+                    <div class="listing-card" data-type="new" data-category="electric,suv">
+                        <div class="listing-badge new">Шинэ</div>
+                        <img src="images/BYDsealU.avif" alt="Tesla CyberTruck 2024">
+                        <div class="listing-info">
+                            <h3>Tesla CyberTruck 2024</h3>
+                            <div class="listing-details">
+                                <span><i class="fa fa-tachometer"></i> 0 км</span>
+                                <span><i class="fa fa-bolt"></i> Цахилгаан</span>
+                                <span><i class="fa fa-car"></i> SUV</span>
+                            </div>
+                            <div class="listing-price">320,000,000₮</div>
+                            <div class="listing-location">
+                                <i class="fa fa-map-marker"></i> Улаанбаатар
+                            </div>
+                            <a href="#" class="view-details-btn">Дэлгэрэнгүй</a>
+                        </div>
+                    </div>
+                    <!-- Add more used listings here -->
                 </div>
             </div>
-
-            <div class="col-4 product-card">
-                <figure>
-                    <img src="images/220crown.jpg" alt="Toyota Land Cruiser 2021">
-                </figure>
-                <div class="product-info">
-                    <h4 class="product-title">Toyota Crown 2020</h4>
-                    <div class="product-details">
-                        <span><i class="fa fa-tachometer"></i> 5,000 км</span>
-                        <span><i class="fa fa-leaf"></i> Хибрид</span>
-                        <span><i class="fa fa-newspaper-o"></i> Дугаартай</span>
+            
+            <!-- SUV Category -->
+            <div class="category-section">
+                <h2 class="section-title">SUV төрлийн автомашинууд</h2>
+                <div class="listings-grid">
+                    <!-- Listing Card 1 -->
+                    <div class="listing-card" data-type="used" data-category="suv">
+                        <div class="listing-badge used">Хуучин</div>
+                        <img src="images/G63.jpg" alt="Mercedes Benz G63 2022">
+                        <div class="listing-info">
+                            <h3>Mercedes Benz G63 2022</h3>
+                            <div class="listing-details">
+                                <span><i class="fa fa-tachometer"></i> 8,000 км</span>
+                                <span><i class="fa fa-gas-pump"></i> Бензин</span>
+                                <span><i class="fa fa-car"></i> SUV</span>
+                            </div>
+                            <div class="listing-price">450,000,000₮</div>
+                            <div class="listing-location">
+                                <i class="fa fa-map-marker"></i> Улаанбаатар
+                            </div>
+                            <a href="#" class="view-details-btn">Дэлгэрэнгүй</a>
+                        </div>
                     </div>
-                    <p class="price">210,000,000₮</p>
-                    <a href="#" class="btn-details">Дэлгэрэнгүй</a>
+                    
+                    <!-- Listing Card 2 -->
+                    <div class="listing-card" data-type="new" data-category="suv">
+                        <div class="listing-badge new">Шинэ</div>
+                        <img src="images/bmwX5.jpeg" alt="BMW X5 2023">
+                        <div class="listing-info">
+                            <h3>BMW X5 2023</h3>
+                            <div class="listing-details">
+                                <span><i class="fa fa-tachometer"></i> 0 км</span>
+                                <span><i class="fa fa-leaf"></i> Хибрид</span>
+                                <span><i class="fa fa-car"></i> SUV</span>
+                            </div>
+                            <div class="listing-price">280,000,000₮</div>
+                            <div class="listing-location">
+                                <i class="fa fa-map-marker"></i> Улаанбаатар
+                            </div>
+                            <a href="#" class="view-details-btn">Дэлгэрэнгүй</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Add more SUV listings here -->
                 </div>
-
+            </div>
+            
+            <!-- Sedan Category -->
+            <div class="category-section">
+                <h2 class="section-title">Седан төрлийн автомашинууд</h2>
+                <div class="listings-grid">
+                    <!-- Listing Card 1 -->
+                    <div class="listing-card" data-type="used" data-category="sedan">
+                        <div class="listing-badge used">Хуучин</div>
+                        <img src="images/bmwM4.avif" alt="BMW M4 2021">
+                        <div class="listing-info">
+                            <h3>BMW M4 2021</h3>
+                            <div class="listing-details">
+                                <span><i class="fa fa-tachometer"></i> 5,000 км</span>
+                                <span><i class="fa fa-gas-pump"></i> Бензин</span>
+                                <span><i class="fa fa-car"></i> Седан</span>
+                            </div>
+                            <div class="listing-price">210,000,000₮</div>
+                            <div class="listing-location">
+                                <i class="fa fa-map-marker"></i> Улаанбаатар
+                            </div>
+                            <a href="#" class="view-details-btn">Дэлгэрэнгүй</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Listing Card 2 -->
+                    <div class="listing-card" data-type="new" data-category="sedan">
+                        <div class="listing-badge new">Шинэ</div>
+                        <img src="images/mercedesCclass.jpg" alt="Mercedes S-Class 2023">
+                        <div class="listing-info">
+                            <h3>Mercedes S-Class 2023</h3>
+                            <div class="listing-details">
+                                <span><i class="fa fa-tachometer"></i> 0 км</span>
+                                <span><i class="fa fa-leaf"></i> Хибрид</span>
+                                <span><i class="fa fa-car"></i> Седан</span>
+                            </div>
+                            <div class="listing-price">350,000,000₮</div>
+                            <div class="listing-location">
+                                <i class="fa fa-map-marker"></i> Улаанбаатар
+                            </div>
+                            <a href="#" class="view-details-btn">Дэлгэрэнгүй</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Add more sedan listings here -->
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="page-btn active">1</a>
+                <a href="#" class="page-btn">2</a>
+                <a href="#" class="page-btn">3</a>
+                <a href="#" class="page-btn">4</a>
+                <a href="#" class="page-btn next">Дараах <i class="fa fa-chevron-right"></i></a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-4 product-card">
-                <figure>
-                    <img src="images/cybertruck.avif" alt="Tesla CyberTruck 2024">
-                </figure>
-                <div class="product-info">
-                    <h4 class="product-title">Tesla CyberTruck 2024</h4>
-                    <div class="product-details">
-                        <span><i class="fa fa-tachometer"></i> 0 км</span>
-                        <span><i class="fa fa-leaf"></i> Хибрид</span>
-                        <span><i class="fa fa-newspaper-o"></i> Дугааргүй</span>
-                    </div>
-                    <p class="price">87,000,000₮</p>
-                    <a href="#" class="btn-details">Дэлгэрэнгүй</a>
-                </div>
-            </div>
+    </section>
 
-            <div class="col-4 product-card">
-                <figure>
-                    <img src="images/G63.jpg">
-                </figure>
-                <div class="product-info">
-                    <h4 class="product-title">Mercedes Benz G63 2022</h4>
-                    <div class="product-details">
-                        <span><i class="fa fa-tachometer"></i> 0км</span>
-                        <span><i class="fa fa-leaf"></i> Хибрид</span>
-                        <span><i class="fa fa-newspaper-o"></i> Дугааргүй</span>
-                    </div>
-                    <p class="price">125,000,000₮</p>
-                    <a href="#" class="btn-details">Дэлгэрэнгүй</a>
-                </div>
-            </div>
-
-            <div class="col-4 product-card">
-                <figure>
-                    <img src="images/bmwM4.avif">
-                </figure>
-                <div class="product-info">
-                    <h4 class="product-title">BMW M4 2021</h4>
-                    <div class="product-details">
-                        <span><i class="fa fa-tachometer"></i> 5,000 км</span>
-                        <span><i class="fa fa-leaf"></i> Хибрид</span>
-                        <span><i class="fa fa-newspaper-o"></i> Дугаартай</span>
-                    </div>
-                    <p class="price">210,000,000₮</p>
-                    <a href="#" class="btn-details">Дэлгэрэнгүй</a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!------footer---->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>Манай апп-ыг татах</h3>
+                    <h3>Манай апп-ыг татах (Тун удахгүй)</h3>
                     <p>Google play болон App store-с татах боломжтой.</p>
                     <div class="app-logo">
                         <img src="images/apple-logo-transparent.svg" alt="App Store">
@@ -222,7 +319,7 @@
                     <img src="images/Logo_AN.png" alt="Brand Logo" class="footer-logo">
                     <p>Монголын хамгийн том авто худалдааны сайт.</p>
                 </div>
-
+                
                 <div class="footer-col">
                     <h3>Бидний цахим хуудсуудыг дагах</h3>
                     <ul>
@@ -236,7 +333,7 @@
                     <h3>Холбоо барих</h3>
                     <ul>
                         <li><a href="#">Утас: +976-99008800</a></li>
-                        <li><a href="#">И-майл хаяг: autonation@sales.mn</a></li>
+                        <li><a href="#">И-Майл хаяг: autonation@sales.mn</a></li>
                         <li><a href="#">Хаяг байршил: Улаанбаатар хот, СБД 8-р хороо, Оюутны гудамж, МУИС-8</a></li>
                     </ul>
 
@@ -244,12 +341,9 @@
             </div>
         </div>
         <div class="copyright">
-            <p>&copy 2025 Autonation. All rights reserved.</p>
+        <p>&copy 2025 Autonation. All rights reserved.</p> 
         </div>
     </footer>
-
-
     <script src="buh_zaruud.js"></script>
 </body>
-
 </html>

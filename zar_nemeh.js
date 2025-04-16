@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // === Mobile Menu ===
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
@@ -99,4 +100,18 @@ document.getElementById('sellForm').addEventListener('submit', (e) => {
     cars.push(newCar);
     localStorage.setItem('cars', JSON.stringify(cars));
     window.location.href = 'home.html';
+=======
+var navLinks = document.getElementById("navLinks");
+function showMenu(){
+    navLinks.style.right = "0";
+}
+function hideMenu(){
+    navLinks.style.right = "-200px";
+}
+
+document.getElementById("saleForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Таны зар амжилттай илгээгдлээ!");
+    // Here, you can later send data to backend or localStorage
+>>>>>>> afd60fa (fixes)
 });

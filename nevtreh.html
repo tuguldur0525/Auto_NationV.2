@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale = 1.0">
@@ -13,15 +12,14 @@
     <!-- Bootstrap icon -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
     <!-- Navigation bar -->
-    <section class="header">
+    <section class="header"> 
         <nav>
             <a href="index.html"> <img src="images/Logo_AN.png"> </a>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
+                <ul> 
                     <li> <a href="index.html">Нүүр</a></li>
                     <li> <a href="buh_zaruud.html">Бүх зарууд</a></li>
                     <li> <a href="zar_nemeh.html">Зар нэмэх</a></li>
@@ -29,31 +27,90 @@
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
+        </nav> 
+            <!-- Replace your current login-signup-section with this -->
+            <section class="auth-section">
+                <div class="auth-container">
+                    <div class="auth-card">
+                        <!-- Login Form -->
+                        <form id="loginForm" class="auth-form active">
+                            <div class="form-header">
+                                <h2>Нэвтрэх</h2>
+                                <p>Тавтай морилно уу</p>
+                            </div>
+                            
+                            <div class="input-group">
+                                <i class="fa fa-user"></i>
+                                <input type="text" placeholder="Хэрэглэгчийн нэр" required>
+                            </div>
+                            
+                            <div class="input-group">
+                                <i class="fa fa-lock"></i>
+                                <input type="password" placeholder="Нууц үг" required>
+                                <span class="toggle-password fa fa-eye"></span>
+                            </div>
+                            
+                            <div class="form-options">
+                                <label class="remember-me">
+                                    <input type="checkbox"> Намайг сана
+                                </label>
+                                <a href="#" class="forgot-password">Нууц үгээ мартсан?</a>
+                            </div>
+                            
+                            <button type="submit" class="auth-btn">
+                                <i class="fa fa-sign-in"></i> Нэвтрэх
+                            </button>
+                            
+                            <div class="form-footer">
+                                Бүртгэлгүй юу? <a id="showSignup">Шинэ хэрэглэгч бол бүртгүүлэх</a>
+                            </div>
+                        </form>
 
-        <section class="login-signup-section roboto-primary">
-            <div class="form-container">
-                <form id="loginForm" class="form">
-                    <h2>Нэвтрэх</h2>
-                    <p>Бүртгэлгүй юу? <a id="showSignup">Бүртгүүлэх</a></p>
-                    <input type="text" placeholder="Хэрэглэгчийн нэр" required>
-                    <input type="password" placeholder="Нууц үг" required>
-                    <button type="submit">Нэвтрэх</button>
-                </form>
-
-                <form id="signupForm" class="form hidden">
-                    <h2>Бүртгүүлэх</h2>
-                    <p>Бүртгэлтэй юу? <a id="showLogin">Нэвтрэх</a></p>
-                    <input type="text" placeholder="Хэрэглэгчийн нэр" required>
-                    <input type="email" placeholder="Gmail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                    <input type="tel" placeholder="Утасны дугаар" required pattern="[0-9]{8}">
-                    <input type="password" placeholder="Нууц үг" required>
-                    <button type="submit">Бүртгүүлэх</button>
-                </form>
-            </div>
-        </section>
-
-    </section>
+                        <!-- Signup Form -->
+                        <form id="signupForm" class="auth-form">
+                            <div class="form-header">
+                                <h2>Бүртгүүлэх</h2>
+                                <p>Шинэ хэрэглэгч бол бүртгүүлнэ үү</p>
+                            </div>
+                            
+                            <div class="input-group">
+                                <i class="fa fa-user"></i>
+                                <input type="text" placeholder="Хэрэглэгчийн нэр" required>
+                            </div>
+                            
+                            <div class="input-group">
+                                <i class="fa fa-envelope"></i>
+                                <input type="email" placeholder="И-мэйл хаяг" required>
+                            </div>
+                            
+                            <div class="input-group">
+                                <i class="fa fa-phone"></i>
+                                <input type="tel" placeholder="Утасны дугаар" required pattern="[0-9]{8}">
+                            </div>
+                            
+                            <div class="input-group">
+                                <i class="fa fa-lock"></i>
+                                <input type="password" placeholder="Нууц үг" required>
+                                <span class="toggle-password fa fa-eye"></span>
+                            </div>
+                            
+                            <div class="input-group">
+                                <i class="fa fa-lock"></i>
+                                <input type="password" placeholder="Нууц үг давтах" required>
+                            </div>
+                            
+                            <button type="submit" class="auth-btn">
+                                <i class="fa fa-user-plus"></i> Бүртгүүлэх
+                            </button>
+                            
+                            <div class="form-footer">
+                                Бүртгэлтэй юу? <a id="showLogin">Нэвтрэх</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+    </section>  
 
     <!-- Footer -->
     <footer class="footer">
@@ -99,5 +156,4 @@
     <!-- JavaScript -->
     <script src="nevtreh.js"></script>
 </body>
-
-</html>
+</html> 
