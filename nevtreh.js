@@ -57,3 +57,29 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
         alert('Бүх талбарыг бөглөнө үү!');
     }
 });
+
+//validation
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // formnii utgiig awna
+    const username = this.querySelector('input[type="text"]').value;
+    const password = this.querySelector('input[type="password"]').value;
+
+    // validation demo daraa n jinhen validationoor solino
+    if (username === "demo" && password === "demo123") {
+        localStorage.setItem('isAuthenticated', 'true');
+        window.location.href = 'index.html';
+    } else {
+        alert('Нэвтрэх нэр эсвэл нууц үг буруу байна!');
+    }
+});
+
+//logout function
+document.querySelector('.nevtreh-btn').addEventListener('click', function(e) {
+    if (localStorage.getItem('isAuthenticated')) {
+        e.preventDefault();
+        localStorage.removeItem('isAuthenticated');
+        window.location.href = 'index.html';
+    }
+});

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale = 1.0">
@@ -12,14 +13,15 @@
     <!-- Bootstrap icon -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <!-- Navigation bar -->
-    <section class="header"> 
+    <section class="header">
         <nav>
             <a href="index.html"> <img src="images/Logo_AN.png"> </a>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul> 
+                <ul>
                     <li> <a href="index.html">Нүүр</a></li>
                     <li> <a href="buh_zaruud.html">Бүх зарууд</a></li>
                     <li> <a href="zar_nemeh.html">Зар нэмэх</a></li>
@@ -27,7 +29,7 @@
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav> 
+        </nav>
 
         <section class="login-signup-section roboto-primary">
             <div class="form-container">
@@ -38,12 +40,12 @@
                     <input type="password" placeholder="Нууц үг" required>
                     <button type="submit">Нэвтрэх</button>
                 </form>
-        
+
                 <form id="signupForm" class="form hidden">
                     <h2>Бүртгүүлэх</h2>
                     <p>Бүртгэлтэй юу? <a id="showLogin">Нэвтрэх</a></p>
                     <input type="text" placeholder="Хэрэглэгчийн нэр" required>
-                    <input type="email" placeholder="Gmail" required>
+                    <input type="email" placeholder="Gmail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                     <input type="tel" placeholder="Утасны дугаар" required pattern="[0-9]{8}">
                     <input type="password" placeholder="Нууц үг" required>
                     <button type="submit">Бүртгүүлэх</button>
@@ -51,7 +53,7 @@
             </div>
         </section>
 
-    </section>  
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -97,4 +99,5 @@
     <!-- JavaScript -->
     <script src="nevtreh.js"></script>
 </body>
-</html> 
+
+</html>

@@ -31,14 +31,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (zarNemehLink) {
         zarNemehLink.addEventListener('click', function(e) {
-            // Check if the user is authenticated
+            // burtguulsen esehiig shalgana
             const isAuthenticated = localStorage.getItem('isAuthenticated');
 
             if (!isAuthenticated) {
-                e.preventDefault(); // Prevent navigating to zar_nemeh.html
+                e.preventDefault(); // zar nemehruu oruulahaas sergiilne
                 alert('Та эхлээд бүртгүүлнэ үү.');
-                window.location.href = 'nevtreh.html'; // Redirect to login page
+                window.location.href = 'nevtreh.html'; // burtguuleh huudasruu ywna
             }
         });
     }
 });
+
+//Automataar log out hiine 30minutiin daraa
+setInterval(() => {
+    localStorage.removeItem('isAuthenticated');
+}, 1800000);
