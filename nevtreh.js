@@ -34,7 +34,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     // authentication
     if (username && password) {
         localStorage.setItem('isAuthenticated', 'true');
-        window.location.href = 'index.html';
+        window.location.href = 'profile.html';
     } else {
         alert('Хэрэглэгчийн нэр эсвэл нууц үг буруу байна!');
     }
@@ -52,7 +52,7 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
     // validation
     if (username && email && phone && password) {
         localStorage.setItem('isAuthenticated', 'true');
-        window.location.href = 'index.html';
+        window.location.href = 'profile.html';
     } else {
         alert('Бүх талбарыг бөглөнө үү!');
     }
@@ -69,7 +69,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     // validation demo daraa n jinhen validationoor solino
     if (username === "demo" && password === "demo123") {
         localStorage.setItem('isAuthenticated', 'true');
-        window.location.href = 'index.html';
+        window.location.href = 'profile.html';
     } else {
         alert('Нэвтрэх нэр эсвэл нууц үг буруу байна!');
     }
@@ -80,6 +80,6 @@ document.querySelector('.nevtreh-btn').addEventListener('click', function(e) {
     if (localStorage.getItem('isAuthenticated')) {
         e.preventDefault();
         localStorage.removeItem('isAuthenticated');
-        window.location.href = 'profile.html';
+        window.location.href = 'index.html';
     }
 });
